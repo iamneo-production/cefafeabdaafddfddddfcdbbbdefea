@@ -2,8 +2,6 @@ package ai.iamneo.testing.Testing_Selenium_TestNg;
 
 import org.testng.annotations.Test;
 import java.net.URL;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -31,7 +29,8 @@ public class AppTest {
 	{
 
 		String title =driver.getTitle();
-		Assert.assertEquals(title, "");
+		String act="We are Hiring!";
+		Assert.assertEquals(title, act);
 	}
 	@Test
 //Moving to FACEBOOK
@@ -49,9 +48,9 @@ public class AppTest {
 //Current URL
 public void currentURL() throws InterruptedException 
 {
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-
+	System.out.println(driver.getCurrentUrl());
+	driver.navigate().forward();
+	driver.navigate().refresh();
 }
 
 	@AfterTest
