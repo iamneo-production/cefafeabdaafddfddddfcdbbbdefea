@@ -30,25 +30,20 @@ public class AppTest {
 	public void iamNeo() throws InterruptedException 
 	{
 
-		 String title ="Get your title";
+		String title =driver.getTitle();
 		Assert.assertEquals(title, "");
 	}
 	@Test
 //Moving to FACEBOOK
 	public void nextPage() throws InterruptedException 
 	{
-		 	
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-
+		driver.navigate().to("https://www.facebook.com");
 	}
 	@Test
 //Back to iamNeo
 	public void backPage() throws InterruptedException 
 	{
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-
+		driver.navigate().back();
 	}
 	@Test
 //Current URL
